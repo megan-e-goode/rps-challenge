@@ -3,9 +3,16 @@ require './lib/player.rb'
 require './lib/game.rb'
 
 class Rps < Sinatra::Base
-
   get '/' do
+    erb(:mode)
+  end
+
+  get '/sign-in' do
     erb(:index)
+  end
+
+  get '/sign-in-multi' do
+    erb(:indexMulti)
   end
 
   post '/name' do
